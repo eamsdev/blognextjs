@@ -1,5 +1,5 @@
-import { Card, CardActions, CardContent, CardMedia, Chip, Stack, Typography } from '@mui/material';
 import TagChip from '@components/TagChip';
+import { Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import Image from 'next/image';
 
 type BlogPostCardProps = {

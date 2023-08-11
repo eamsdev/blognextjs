@@ -1,7 +1,7 @@
-import { CssBaseline } from '@mui/material';
-import FullscreenContainer from '@components/FullscreenContainer';
-import { ThemeWrapper } from '@themes/ThemeWrapper';
 import './globals.css';
+import FullscreenContainer from '@components/FullscreenContainer';
+import { CssBaseline } from '@mui/material';
+import { ThemeWrapper } from '@themes/ThemeWrapper';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
