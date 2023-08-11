@@ -2,11 +2,13 @@
   "name": "miniblognextjs2",
   "version": "0.1.0",
   "private": true,
+  "author": "Pete Eamsuwan",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "20.4.9",
@@ -18,5 +20,13 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,css,md}": "prettier --write"
   }
 }
