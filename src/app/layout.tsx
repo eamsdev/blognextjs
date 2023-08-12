@@ -1,6 +1,7 @@
 import './globals.css';
 import FullscreenContainer from '@components/FullscreenContainer';
-import { CssBaseline } from '@mui/material';
+import Header from '@components/Header';
+import { Container, CssBaseline } from '@mui/material';
 import { ThemeWrapper } from '@themes/ThemeWrapper';
 import type { Metadata } from 'next';
 
@@ -18,7 +19,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <ThemeWrapper>
           <CssBaseline />
-          <FullscreenContainer>{children}</FullscreenContainer>
+          <FullscreenContainer>
+            <Container>
+              <Header />
+              {children}
+            </Container>
+          </FullscreenContainer>
         </ThemeWrapper>
       </body>
     </html>

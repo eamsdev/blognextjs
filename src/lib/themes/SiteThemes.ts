@@ -1,6 +1,6 @@
 'use client';
 
-import { createTheme } from '@mui/material';
+import { AppBar, ThemeOptions, createTheme } from '@mui/material';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({
@@ -10,6 +10,34 @@ const inter = Inter({
   display: 'swap',
 });
 
+const baseTheme = (mode: 'light' | 'dark'): ThemeOptions => {
+  return {
+    components: {
+      MuiAppBar: {
+        styleOverrides: {
+          colorPrimary: {
+            backgroundColor: mode == 'light' ? '#fff' : '#000',
+            color: mode == 'light' ? '#000' : '#fff',
+          },
+          root: {
+            boxShadow: 'none',
+          },
+        },
+      },
+      MuiToolbar: {
+        styleOverrides: {
+          root: {
+            padding: 0,
+            '@media (min-width: 0px)': {
+              padding: 0,
+            },
+          },
+        },
+      },
+    },
+  };
+};
+
 export const lightTheme = createTheme({
   palette: {
     mode: 'light',
@@ -17,6 +45,7 @@ export const lightTheme = createTheme({
   typography: {
     fontFamily: inter.style.fontFamily,
   },
+  ...baseTheme('light'),
 });
 
 export const darkTheme = createTheme({
@@ -26,4 +55,5 @@ export const darkTheme = createTheme({
   typography: {
     fontFamily: inter.style.fontFamily,
   },
+  ...baseTheme('dark'),
 });
