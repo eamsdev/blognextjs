@@ -1,11 +1,11 @@
-import Navbar from './Navbar';
-import { Box, Divider } from '@mui/material';
+import NavBar from '@components/Navbar';
+import { Divider } from '@mui/material';
 
 export default function Header() {
   return (
     <>
-      <Navbar />
-      <Divider />
+      <NavBar />
+      <Divider sx={{ marginBottom: '20px' }} />
     </>
   );
 }

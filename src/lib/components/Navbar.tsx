@@ -8,6 +8,8 @@ import {
   Container,
   Divider,
   IconButton,
+  SxProps,
+  Theme,
   Toolbar,
   Typography,
 } from '@mui/material';
@@ -15,11 +17,17 @@ import React from 'react';
 
 const navItems = ['Blog', 'About', 'Contact'];
 
-export default function Navbar() {
-  const toolbarStyles = { marginY: '10px' };
+export default function NavBar() {
+  const toolbarStyles: SxProps<Theme> = {
+    marginY: '10px',
+    flexDirection: {
+      xs: 'row-reverse',
+      sm: 'row',
+    },
+  };
 
   return (
-    <Box component="header">
+    <Box component="header" sx={{ userSelect: 'none' }}>
       <AppBar component="nav">
         <Container>
           <Toolbar sx={toolbarStyles}>
@@ -37,7 +45,7 @@ export default function Navbar() {
               component="div"
               fontWeight={600}
               fontSize={20}
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+              sx={{ flexGrow: 1 }}
             >
               EAMS@DEV
             </Typography>

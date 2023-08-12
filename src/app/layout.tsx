@@ -20,7 +20,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <ThemeWrapper>
           <CssBaseline />
           <FullscreenContainer>
-            <Container>
+            <Container sx={{ padding: 0 }}>
               <Header />
               {children}
             </Container>

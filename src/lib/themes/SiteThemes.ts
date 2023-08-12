@@ -12,6 +12,9 @@ const inter = Inter({
 
 const baseTheme = (mode: 'light' | 'dark'): ThemeOptions => {
   return {
+    palette: {
+      divider: mode == 'light' ? 'rgba(0, 0, 0, 0.34)' : 'rgba(255, 255, 255, 0.34)',
+    },
     components: {
       MuiAppBar: {
         styleOverrides: {
