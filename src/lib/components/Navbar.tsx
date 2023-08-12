@@ -29,14 +29,14 @@ export default function NavBar() {
   return (
     <Box component="header" sx={{ userSelect: 'none' }}>
       <AppBar component="nav">
-        <Container>
+        <Container sx={{ overflowX: 'visible' }}>
           <Toolbar sx={toolbarStyles}>
             <IconButton
               color="inherit"
               aria-label="open drawer"
               edge="start"
               onClick={() => {}}
-              sx={{ mr: 2, display: { sm: 'none' } }}
+              sx={{ display: { sm: 'none' } }}
             >
               <MenuIcon />
             </IconButton>
@@ -68,6 +68,12 @@ export default function NavBar() {
               ))}
             </Box>
           </Toolbar>
+          <Divider
+            sx={{
+              width: { xs: '200% !important', sm: '100% !important' },
+              marginLeft: { xs: '-20px', sm: '0px' },
+            }}
+          />
         </Container>
       </AppBar>
       <Toolbar sx={toolbarStyles} />

@@ -5,7 +5,6 @@ export default function Header() {
   return (
     <>
       <NavBar />
-      <Divider sx={{ marginBottom: '20px' }} />
     </>
   );
 }
