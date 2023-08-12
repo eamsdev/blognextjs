@@ -57,7 +57,6 @@ export default function NavBar() {
                     fontWeight: '400 !important',
                     color: 'text.primary',
                     textTransform: 'none',
-                    marginLeft: '14px',
                     ':hover': {
                       backgroundColor: 'background.default',
                     },
