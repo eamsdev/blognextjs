@@ -26,26 +26,12 @@ const postsDirectory = path.join(process.cwd(), 'posts');
 const frontmatterRegex = /---(.|\n)*?---(\n)/;
 const firstParagraphRegex = /\w.*/;
 
-export const getAllPostsCardProps = async (): Promise<BlogPostCardProps[]> => {
+export const getAllPostsCardProps = (): BlogPostCardProps[] => {
   var allIds = getAllPostIds().map((x) => x.params.id);
-  return await Promise.all(allIds.map((x) => getCardProps(x)));
+  return allIds.map((x) => getCardProps(x));
 };
 
-export const getCardProps = async (id: string): Promise<BlogPostCardProps> => {
-  const markdown = getProcessedMarkdown(id);
-  const frontmatter = markdown.data.frontmatter as any;
-  const body = markdown.value as string;
-
-  return {
-    ...frontmatter,
-    date: strToDate(frontmatter.date),
-    tags: frontmatter.tags,
-    preview: body.match(firstParagraphRegex)![0],
-    thumbnailPath: frontmatter.thumbnailPath,
-  };
-};
-
-export const getPostData = async (id: string): Promise<PostData> => {
+export const getPostData = (id: string): PostData => {
   const markdown = getProcessedMarkdown(id);
   const frontmatter = markdown.data.frontmatter as any;
   const body = markdown.value as string;
@@ -77,4 +63,18 @@ const getProcessedMarkdown = (id: string): VFile => {
   remarkProcessor.run(remarkProcessor.parse(markdown as any), markdown as any);
 
   return markdown;
+};
+
+const getCardProps = (id: string): BlogPostCardProps => {
+  const markdown = getProcessedMarkdown(id);
+  const frontmatter = markdown.data.frontmatter as any;
+  const body = markdown.value as string;
+
+  return {
+    ...frontmatter,
+    date: strToDate(frontmatter.date),
+    tags: frontmatter.tags,
+    preview: body.replace(frontmatterRegex, '').match(firstParagraphRegex)![0],
+    thumbnailPath: frontmatter.thumbnailPath,
+  };
 };

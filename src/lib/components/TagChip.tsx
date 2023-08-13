@@ -6,5 +6,20 @@ type TagChipProps = {
 };
 
 export default function TagChip({ tag, link }: TagChipProps) {
-  return <Chip key={tag} label={tag} clickable component="a" href={link} />;
+  return (
+    <Chip
+      key={tag}
+      label={tag}
+      clickable
+      component="a"
+      href={link}
+      size="small"
+      color="primary"
+      variant="outlined"
+      sx={{
+        fontSize: '12px',
+        height: '18px',
+      }}
+    />
+  );
 }

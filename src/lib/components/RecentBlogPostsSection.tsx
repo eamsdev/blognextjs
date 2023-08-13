@@ -1,29 +1,28 @@
+import BlogPostCard from '@components/BlogPostCard';
+import BlogPostCardHorizontal from '@components/BlogPostCardHorizontal';
 import { Box, Grid, Typography } from '@mui/material';
+import { getAllPostsCardProps } from '@utils/postUtils';
 
 export default function RecentBlogPostsSection() {
+  const cardProps = getAllPostsCardProps();
+
   return (
     <Box paddingY={'20px'}>
       <Typography fontSize={'24px'} fontWeight={'600'}>
         Recent blog posts
       </Typography>
-      <Grid container spacing={1} marginTop={'10px'}>
+      <Grid container spacing={2} marginTop={'10px'}>
         <Grid item container sm={12} md={6}>
           <Grid item xs={12}>
-            <Box bgcolor={'black'} width={'100%'} height={'408px'} color={'white'}>
-              1
-            </Box>
+            <BlogPostCard {...cardProps[0]} />
           </Grid>
         </Grid>
-        <Grid item container spacing={1} sm={12} md={6}>
+        <Grid item container spacing={2} sm={12} md={6}>
           <Grid item xs={12}>
-            <Box bgcolor={'black'} width={'100%'} height={'200px'} color={'white'}>
-              2
-            </Box>
+            <BlogPostCard {...cardProps[0]} condensed />
           </Grid>
           <Grid item xs={12}>
-            <Box bgcolor={'black'} width={'100%'} height={'200px'} color={'white'}>
-              3
-            </Box>
+            <BlogPostCard {...cardProps[0]} condensed />
           </Grid>
         </Grid>
       </Grid>
