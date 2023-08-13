@@ -1,12 +1,12 @@
 ::-webkit-scrollbar {
-  width: 6px !important;
-  height: 6px !important;
+  width: 4px !important;
+  height: 4px !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ffffff89;
+  background: #0000008f;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0000008f;
+  background-color: #ffffff89;
 }

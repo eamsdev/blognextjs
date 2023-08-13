@@ -2,7 +2,7 @@ import { Box, Grid, Typography } from '@mui/material';
 
 export default function AllBlogPostsSection() {
   return (
-    <Box paddingY={'20px'} sx={{ paddingX: { xs: '8px !important', sm: '0px !important' } }}>
+    <Box paddingY={'20px'}>
       <Typography fontSize={'24px'} fontWeight={'600'}>
         All blog posts
       </Typography>

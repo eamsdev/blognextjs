@@ -1,8 +1,8 @@
-import { Box, Grid, Stack, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 
 export default function RecentBlogPostsSection() {
   return (
-    <Box paddingY={'20px'} sx={{ paddingX: { xs: '8px !important', sm: '0px !important' } }}>
+    <Box paddingY={'20px'}>
       <Typography fontSize={'24px'} fontWeight={'600'}>
         Recent blog posts
       </Typography>
