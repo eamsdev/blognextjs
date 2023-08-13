@@ -1,6 +1,6 @@
 ---
 id: aws-pipeline
-title: Setting up a CICD Pipeline for your github projects
+title: CICD Pipeline with AWS Code Pipeline
 description: Set up CICD Pipeline for your github projects using AWS Pipeline, to deploy your static content automatically.
 date: 29-12-2022
 author: Pete Eamsuwan
@@ -9,7 +9,7 @@ meta: Learn how to set up CICD Pipeline for your github projects using AWS Pipel
 tags:
   - AWS
   - CICD
-thumbnailPath: /post-img/aws-pipeline-0.webp
+thumbnailPath: /post-img/aws-pipeline-thumbnail.webp
 ---
 
 In the last article, we learned about code-splitting, which allows us to break up our JavaScript code into smaller, more manageable files. While this improves the responsiveness and user experience of our blog, it can be a hassle to manually upload all of the new assets to our Amazon Web Services (AWS) S3 bucket. In this tutorial, I will show you how to set up a continuous integration and deployment (CICD) pipeline that automatically builds and deploys our assets to the S3 bucket where our blog is hosted whenever we push our changes to GitHub.

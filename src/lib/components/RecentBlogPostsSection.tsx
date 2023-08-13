@@ -1,5 +1,4 @@
 import BlogPostCard from '@components/BlogPostCard';
-import BlogPostCardHorizontal from '@components/BlogPostCardHorizontal';
 import { Box, Grid, Typography } from '@mui/material';
 import { getAllPostsCardProps } from '@utils/postUtils';
 
@@ -18,10 +17,10 @@ export default function RecentBlogPostsSection() {
           </Grid>
         </Grid>
         <Grid item container spacing={2} sm={12} md={6}>
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={6} md={12}>
             <BlogPostCard {...cardProps[0]} condensed />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={6} md={12}>
             <BlogPostCard {...cardProps[0]} condensed />
           </Grid>
         </Grid>

@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <main>
       <RecentBlogPostsSection />
+      <Divider sx={{ marginTop: '20px' }} />
       <AllBlogPostsSection />
       <Divider />
     </main>

@@ -30,8 +30,7 @@ export default function BlogPostCard(props: BlogPostCardProps & CardProps) {
     <Card sx={{ borderRadius: 0, boxShadow: 'none', overflow: 'hidden' }}>
       <CardActionArea
         sx={{
-          height: 'auto',
-          display: { sm: 'block', md: `${props.condensed ? 'flex' : 'block'}` },
+          display: { md: `${props.condensed ? 'flex' : 'block'}` },
           alignItems: 'flex-start',
         }}
       >
@@ -39,8 +38,14 @@ export default function BlogPostCard(props: BlogPostCardProps & CardProps) {
           image={props.thumbnailPath}
           title={props.title}
           sx={{
-            minHeight: '200px',
-            width: { sm: 'auto', md: `${props.condensed ? '40%' : '100%'}` },
+            backgroundPosition: 'left',
+            minHeight: { xs: '200px', md: `${props.condensed ? '200px' : '259px'}` },
+            width: { xs: 'auto', md: `${props.condensed ? '40%' : '100%'}` },
+            marginBottom: {
+              xs: '20px !important',
+              md: `${props.condensed ? '0px !important' : '10px'}`,
+            },
+            marginRight: { md: `${props.condensed ? '10px' : '0'}` },
           }}
         />
         <StyledCardContent {...props} />
@@ -63,22 +68,21 @@ const StyledCardContent = ({
       flexDirection={'column'}
       justifyContent={'space-between'}
       sx={{
-        width: { sm: 'auto', md: `${horizontal ? '60%' : '100%'}` },
+        width: { md: `${horizontal ? '60%' : '100%'}` },
+        minHeight: { md: `${horizontal ? '200px' : '138px'}` },
       }}
     >
-      <Box>
-        <CardContent sx={{ padding: 0 }}>
-          <Typography color={'secondary'} fontSize={14} fontWeight={600} marginBottom={1}>
-            {author} • {date.toLocaleDateString()}
-          </Typography>
-          <Typography fontSize={'20px'} fontWeight={'600'} lineHeight={1.3} marginBottom={1}>
-            {title}
-          </Typography>
-          <Typography fontWeight={400} fontSize={'14px'} color={'text.secondary'}>
-            {description}
-          </Typography>
-        </CardContent>
-      </Box>
+      <CardContent sx={{ padding: 0 }}>
+        <Typography color={'secondary'} fontSize={14} fontWeight={600} marginBottom={1}>
+          {author} • {date.toLocaleDateString()}
+        </Typography>
+        <Typography fontSize={'20px'} fontWeight={'600'} lineHeight={1.3} marginBottom={1}>
+          {title}
+        </Typography>
+        <Typography fontWeight={400} fontSize={'14px'} color={'text.secondary'}>
+          {description}
+        </Typography>
+      </CardContent>
       <CardActions sx={{ padding: 0, marginTop: '10px' }}>
         {tags.map((tag) => (
           <TagChip key={tag} tag={tag} link={`/tag/${tag}`} />
