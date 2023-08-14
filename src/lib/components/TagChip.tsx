@@ -14,7 +14,7 @@ export default function TagChip({ tag, link }: TagChipProps) {
       component="a"
       href={link}
       size="small"
-      color="primary"
+      color="secondary"
       variant="outlined"
       sx={{
         fontSize: '12px',

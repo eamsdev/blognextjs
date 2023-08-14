@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <Box
       component="footer"
-      py={'30px'}
+      paddingBottom={'30px'}
       display={'flex'}
       flexDirection={'column'}
       alignItems={{ xs: 'center', md: 'flex-start' }}
