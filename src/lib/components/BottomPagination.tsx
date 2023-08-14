@@ -23,7 +23,7 @@ export default function BottomPagination({ pageNumber, totalPages }: BottomPagin
       }}
     >
       <Pagination
-        count={2}
+        count={totalPages}
         shape="rounded"
         page={pageNumber}
         siblingCount={0}
