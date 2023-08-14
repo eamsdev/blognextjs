@@ -37,7 +37,7 @@ export const getAllPostsCardProps = (): BlogPostCardProps[] => {
 
 export function getCardPropsForPage(pageNumber: number) {
   const allPosts = getAllPostsCardProps();
-  let cardProps = getAllPostsCardProps()
+  let cardProps = allPosts
     .slice(recentPostCount + postPerPage * (pageNumber - 1)) // Take away recent posts + posts in previous pages
     .slice(0, postPerPage);
 
