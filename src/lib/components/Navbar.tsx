@@ -15,7 +15,20 @@ import {
 } from '@mui/material';
 import React from 'react';
 
-const navItems = ['Blog', 'About', 'Contact'];
+const navItems = [
+  {
+    label: 'Blog',
+    link: '/',
+  },
+  {
+    label: 'About',
+    link: '/about',
+  },
+  {
+    label: 'Contact',
+    link: '/contact',
+  },
+];
 
 export default function NavBar() {
   const toolbarStyles: SxProps<Theme> = {
@@ -27,7 +40,7 @@ export default function NavBar() {
   };
 
   return (
-    <Box component="header" sx={{ userSelect: 'none' }}>
+    <Box component="header">
       <AppBar component="nav">
         <Container sx={{ overflowX: 'visible' }}>
           <Toolbar sx={toolbarStyles}>
@@ -40,18 +53,33 @@ export default function NavBar() {
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              fontWeight={600}
-              fontSize={20}
-              sx={{ flexGrow: 1 }}
+            <Box
+              sx={{
+                flexGrow: 1,
+              }}
             >
-              EAMS@DEV
-            </Typography>
+              <Button
+                onClick={() => (location.href = '/')}
+                sx={{
+                  fontSize: '20px',
+                  fontWeight: '400 !important',
+                  color: 'text.primary',
+                  textTransform: 'none',
+                  ':hover': {
+                    backgroundColor: 'background.default',
+                  },
+                }}
+              >
+                <Typography variant="h6" component="div" fontWeight={600} fontSize={20}>
+                  EAMS@DEV
+                </Typography>
+              </Button>
+            </Box>
+
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (
                 <Button
+                  onClick={() => (location.href = item.link)}
                   sx={{
                     fontSize: '20px',
                     fontWeight: '400 !important',
@@ -61,9 +89,9 @@ export default function NavBar() {
                       backgroundColor: 'background.default',
                     },
                   }}
-                  key={item}
+                  key={item.label}
                 >
-                  {item}
+                  {item.label}
                 </Button>
               ))}
             </Box>

@@ -7,7 +7,7 @@ export default function Footer() {
       py={'30px'}
       display={'flex'}
       flexDirection={'column'}
-      alignItems={'flex-start'}
+      alignItems={{ xs: 'center', md: 'flex-start' }}
       alignSelf={'stretch'}
     >
       <Box display={'flex'} alignItems={'flex-start'} gap="14px">

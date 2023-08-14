@@ -38,7 +38,7 @@ export default function BlogPostCard(props: BlogPostCardProps & CardProps) {
           image={props.thumbnailPath}
           title={props.title}
           sx={{
-            backgroundPosition: 'left',
+            backgroundPosition: 'center',
             minHeight: { xs: '200px', md: `${props.condensed ? '200px' : '259px'}` },
             width: { xs: 'auto', md: `${props.condensed ? '40%' : '100%'}` },
             marginBottom: {

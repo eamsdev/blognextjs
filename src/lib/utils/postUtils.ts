@@ -61,6 +61,13 @@ export const getAllPostIds = () => {
   });
 };
 
+export const getTotalNumberOfPages = (): number => {
+  const postsCount = getAllPostIds().slice(3).length;
+  const numberOfPages = Math.floor(postsCount / 4) + (postsCount % 4 > 0 ? 1 : 0);
+
+  return numberOfPages;
+};
+
 const getProcessedMarkdown = (id: string): VFile => {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
