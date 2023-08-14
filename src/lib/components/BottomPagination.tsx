@@ -19,7 +19,7 @@ export default function BottomPagination({ pageNumber, totalPages }: BottomPagin
       sx={{
         borderTopWidth: '1px',
         borderTopStyle: 'solid',
-        borderTopColor: 'text.disabled',
+        borderTopColor: 'divider',
       }}
     >
       <Pagination
@@ -37,3 +37,27 @@ export default function BottomPagination({ pageNumber, totalPages }: BottomPagin
 const onPageChange = (_: React.ChangeEvent<unknown>, value: number) => {
   location.href = `/page/${value}#all`;
 };
+
+// type NavButtonProps = {
+//   direction: 'back' | 'next';
+// };
+
+// const NavButton = ({ direction }: NavButtonProps) => {
+//   return (
+//     <Button
+//       {...(direction == 'next'
+//         ? { endIcon: <ArrowForwardIcon /> }
+//         : { startIcon: <ArrowBackIcon /> })}
+//       sx={{
+//         fontSize: '14px',
+//         color: 'text.secondary',
+//         textTransform: 'none',
+//         ':hover': {
+//           backgroundColor: 'background.default',
+//         },
+//       }}
+//     >
+//       {direction == 'next' ? 'Next' : 'Previous'}
+//     </Button>
+//   );
+// };
