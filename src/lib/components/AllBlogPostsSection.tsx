@@ -9,7 +9,7 @@ export default function AllBlogPostsSection() {
       <Typography fontSize={'24px'} fontWeight={'600'}>
         All blog posts
       </Typography>
-      <Grid container spacing={2} marginTop={'10px'}>
+      <Grid container spacing={1.5} marginTop={'10px'}>
         <Grid item xs={12} sm={6}>
           <BlogPostCard {...cardProps[0]} condensed />
         </Grid>

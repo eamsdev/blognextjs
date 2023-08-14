@@ -83,7 +83,7 @@ const StyledCardContent = ({
           {description}
         </Typography>
       </CardContent>
-      <CardActions sx={{ padding: 0, marginTop: '10px' }}>
+      <CardActions sx={{ padding: 0, marginTop: '10px', marginBottom: '2px' }}>
         {tags.map((tag) => (
           <TagChip key={tag} tag={tag} link={`/tag/${tag}`} />
         ))}

@@ -58,5 +58,4 @@ export const darkTheme = createTheme({
   typography: {
     fontFamily: inter.style.fontFamily,
   },
-  ...baseTheme('dark'),
 });
