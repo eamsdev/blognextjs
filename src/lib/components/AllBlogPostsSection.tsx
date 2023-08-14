@@ -1,7 +1,7 @@
 import BlogPostCard from '@components/BlogPostCard';
 import BottomPagination from '@components/BottomPagination';
 import { Box, Grid, Typography } from '@mui/material';
-import { getAllPostsCardProps } from '@utils/postUtils';
+import { getCardPropsForPage } from '@utils/postUtils';
 
 type AllBlogPostsSection = {
   pageNumber: number;
@@ -9,14 +9,7 @@ type AllBlogPostsSection = {
 };
 
 export default function AllBlogPostsSection({ pageNumber, totalPages }: AllBlogPostsSection) {
-  const allPosts = getAllPostsCardProps();
-  let cardProps = getAllPostsCardProps()
-    .slice(3 + 4 * (pageNumber - 1)) // Take away recent posts + posts in previous pages
-    .slice(0, 4); // Get 4 posts
-
-  if (cardProps.length < 4) {
-    cardProps = allPosts.slice(-4);
-  }
+  const cardProps = getCardPropsForPage(pageNumber);
   return (
     <Box paddingY={'20px'}>
       <div id="all">
@@ -26,8 +19,8 @@ export default function AllBlogPostsSection({ pageNumber, totalPages }: AllBlogP
       </div>
       <Grid container spacing={1.5} marginTop={'10px'}>
         {cardProps.map((x) => (
-          <Grid key={x.title} item xs={12} sm={6}>
-            <BlogPostCard {...x} condensed />
+          <Grid key={x.title} item xs={12} sm={6} md={4}>
+            <BlogPostCard {...x} />
           </Grid>
         ))}
       </Grid>

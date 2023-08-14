@@ -22,6 +22,8 @@ export type FrontMatter = {
   tags: string[];
 };
 
+const recentPostCount = 3;
+const postPerPage = 6;
 const postsDirectory = path.join(process.cwd(), 'posts');
 const frontmatterRegex = /---(.|\n)*?---(\n)/;
 const firstParagraphRegex = /\w.*/;
@@ -32,6 +34,19 @@ export const getAllPostsCardProps = (): BlogPostCardProps[] => {
     .sort(sortByLatestDateFunc);
   return allPosts;
 };
+
+export function getCardPropsForPage(pageNumber: number) {
+  const allPosts = getAllPostsCardProps();
+  let cardProps = getAllPostsCardProps()
+    .slice(recentPostCount + postPerPage * (pageNumber - 1)) // Take away recent posts + posts in previous pages
+    .slice(0, postPerPage);
+
+  if (cardProps.length < postPerPage) {
+    cardProps = allPosts.slice(-postPerPage);
+  }
+
+  return cardProps;
+}
 
 const sortByLatestDateFunc = (a: BlogPostCardProps, b: BlogPostCardProps) => {
   return b.date.valueOf() - a.date.valueOf();
@@ -62,8 +77,9 @@ export const getAllPostIds = () => {
 };
 
 export const getTotalNumberOfPages = (): number => {
-  const postsCount = getAllPostIds().slice(3).length;
-  const numberOfPages = Math.floor(postsCount / 4) + (postsCount % 4 > 0 ? 1 : 0);
+  const postsCount = getAllPostIds().slice(recentPostCount).length;
+  const numberOfPages =
+    Math.floor(postsCount / postPerPage) + (postsCount % postPerPage > 0 ? 1 : 0);
 
   return numberOfPages;
 };

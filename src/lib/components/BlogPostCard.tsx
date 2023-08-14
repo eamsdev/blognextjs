@@ -60,7 +60,7 @@ const StyledCardContent = ({
   author,
   title,
   description,
-  condensed: horizontal,
+  condensed,
 }: BlogPostCardProps & CardProps) => {
   return (
     <Box
@@ -68,8 +68,8 @@ const StyledCardContent = ({
       flexDirection={'column'}
       justifyContent={'space-between'}
       sx={{
-        width: { md: `${horizontal ? '60%' : '100%'}` },
-        minHeight: { md: `${horizontal ? '200px' : '138px'}` },
+        width: { md: `${condensed ? '60%' : '100%'}` },
+        minHeight: { md: `${condensed ? '200px' : '138px'}` },
       }}
     >
       <CardContent sx={{ padding: 0 }}>
