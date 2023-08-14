@@ -11,6 +11,7 @@ tags:
   - .Net
   - CSharp
   - React
+thumbnailPath: /post-img/github-oauth-thumbnail.webp
 ---
 
 In the previous article we examined OAuth2 specification and how the Authorization Code flow could be used to authenticate users for your application. This article assumes that you have a basic knowledge of OAuth protocol, you can refer to the previous article for a refresher.

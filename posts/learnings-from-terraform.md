@@ -10,6 +10,7 @@ tags:
   - Terraform
   - AWS
   - Azure
+thumbnailPath: /post-img/terraform-tips-thumbnail.webp
 ---
 
 Infrastructure as code is an incredibly powerful tool that allows your cloud infrastructure to be defined and managed through code. This, combined with source control and deployment pipelines, allows you to review and audit changes, as well as automate deployments to your specific environments.

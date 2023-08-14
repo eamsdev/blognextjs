@@ -10,6 +10,7 @@ tags:
   - .Net
   - Event Sourcing
   - CSharp
+thumbnailPath: /post-img/miniess-thumbnail.webp
 ---
 
 Event sourcing is a powerful pattern for building resilient and scalable applications, especially in use cases where maintaining a complete and accurate audit trail of events is essential. In this article, we will explore the process of building an event sourcing micro framework, using EventStoreDB as the event store.

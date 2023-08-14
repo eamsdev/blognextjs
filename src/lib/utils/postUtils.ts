@@ -27,8 +27,14 @@ const frontmatterRegex = /---(.|\n)*?---(\n)/;
 const firstParagraphRegex = /\w.*/;
 
 export const getAllPostsCardProps = (): BlogPostCardProps[] => {
-  var allIds = getAllPostIds().map((x) => x.params.id);
-  return allIds.map((x) => getCardProps(x));
+  var allPosts = getAllPostIds()
+    .map((x) => getCardProps(x.params.id))
+    .sort(sortByLatestDateFunc);
+  return allPosts;
+};
+
+const sortByLatestDateFunc = (a: BlogPostCardProps, b: BlogPostCardProps) => {
+  return b.date.valueOf() - a.date.valueOf();
 };
 
 export const getPostData = (id: string): PostData => {

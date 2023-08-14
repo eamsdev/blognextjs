@@ -9,6 +9,7 @@ meta: Learn more about OAuth2 and how to use it to access protected resources on
 tags:
   - OAuth
   - Security
+thumbnailPath: /post-img/oauth-flow-thumbnail.webp
 ---
 
 So you have created a shiny new application with a basic Email/Password authentication/authorization, and you want to add a "Sign In with Github" button to it (or something similar with Google/Microsoft etc). How would you go about doing it?

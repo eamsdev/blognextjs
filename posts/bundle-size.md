@@ -9,6 +9,7 @@ meta: Learn how to reduce your JS bundle size to improve user experience by extr
 tags:
   - React
   - Webpack
+thumbnailPath: /post-img/bundle-size-thumbnail.webp
 ---
 
 Webpack configuration is one of the things that I had taken for granted since I started my web development journey (my background was in backend, so I rarely touch frontend configurations). It is something that you only have to configure once, and if you have done it correctly, you usually don't have to touch it again. It is not until I started this blog that I have started paying attention to what the configuration actually does and what impact it has on performance and user experience.

@@ -10,6 +10,7 @@ tags:
   - React
   - Typescript
   - Webpack
+thumbnailPath: /post-img/lazyload-thumbnail.webp
 ---
 
 In one of the previous articles we investigated code-splitting and how it, with the help of browser caching, could help reduce traffic on subsequent visits. This technique helps reduce the time for subsequent load by only fetching the javascript files that have changed, but what about the initial load? In this article we will discuss lazy loading, and demonstrate how it can help reduce initial load time of your website.

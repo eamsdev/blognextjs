@@ -9,6 +9,7 @@ meta: Learn how to use Webpack's require.context function to dynamically load ma
 tags:
   - Typescript
   - Webpack
+thumbnailPath: /post-img/webpack-thumbnail.webp
 ---
 
 While working on this blog, I faced a challenge. One way to add new content to the blog was to manually import each markdown file containing the blog content into a configuration file, which would then be used to render the content in the react components.
