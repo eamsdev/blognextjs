@@ -13,7 +13,7 @@ export default function ThemeToggle() {
     <Box
       display={'flex'}
       alignItems={'flex-start'}
-      gap={'5px'}
+      gap={'7px'}
       borderRadius={'29px'}
       bgcolor={'text.primary'}
       color={'background.default'}
@@ -27,13 +27,13 @@ export default function ThemeToggle() {
     >
       <Box
         position={'absolute'}
-        left={'5px'}
+        left={'4px'}
         width={'23px'}
         height={'23px'}
         bgcolor={'background.default'}
         borderRadius={'50%'}
         sx={{
-          transform: `${currentColorMode === 'light' ? '' : 'translateX(28px)'}`,
+          transform: `${currentColorMode === 'light' ? '' : 'translateX(30px)'}`,
           transition: 'transform ease 0.05s',
         }}
       />
