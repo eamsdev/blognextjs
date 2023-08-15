@@ -12,13 +12,13 @@ export default function RecentBlogPostsSection() {
       <Typography fontSize={'24px'} fontWeight={'600'}>
         Recent blog posts
       </Typography>
-      <Grid container spacing={1.5} marginTop={'10px'}>
+      <Grid container spacing={2} marginTop={'10px'}>
         <Grid item container sm={12} md={6}>
           <Grid item xs={12}>
             <BlogPostCard {...cardProps[0]} />
           </Grid>
         </Grid>
-        <Grid item container spacing={1.5} sm={12} md={6}>
+        <Grid item container spacing={2} sm={12} md={6}>
           <Grid item xs={12} sm={6} md={12}>
             <BlogPostCard {...cardProps[1]} condensed />
           </Grid>

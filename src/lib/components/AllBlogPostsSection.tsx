@@ -19,7 +19,7 @@ export default function AllBlogPostsSection({ pageNumber, totalPages }: AllBlogP
           All blog posts
         </Typography>
       </div>
-      <Grid container spacing={1.5} marginTop={'10px'}>
+      <Grid container spacing={2} marginTop={'10px'}>
         {cardProps.map((x) => (
           <Grid key={x.title} item xs={12} sm={6} md={4}>
             <BlogPostCard {...x} />

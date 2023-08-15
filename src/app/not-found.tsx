@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <Box>
       <h2>404: Not Found</h2>
-      <p>Oops, how did you get here?.</p>
+      <p>Oops, how did you get here?</p>
     </Box>
   );
 }

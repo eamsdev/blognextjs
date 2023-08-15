@@ -27,6 +27,13 @@ export default function Footer() {
         >
           Github
         </Typography>
+        <Typography
+          component={'a'}
+          href="mailto: pete@eams.dev"
+          sx={{ textDecoration: 'none', color: 'text.primary' }}
+        >
+          Email
+        </Typography>
       </Box>
     </Box>
   );

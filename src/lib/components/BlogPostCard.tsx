@@ -67,7 +67,7 @@ const StyledCardContent = ({
       justifyContent={'space-between'}
       sx={{
         width: { md: `${condensed ? '60%' : '100%'}` },
-        minHeight: { md: `${condensed ? '200px' : '138px'}` },
+        minHeight: { md: `${condensed ? '200px' : '160px'}` },
       }}
     >
       <CardContent sx={{ padding: 0 }}>

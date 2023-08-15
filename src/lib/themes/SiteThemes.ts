@@ -13,13 +13,29 @@ const inter = Inter({
 const baseTheme = (mode: 'light' | 'dark'): ThemeOptions => {
   return {
     palette: {
+      mode: mode,
       divider: mode == 'light' ? 'rgba(0, 0, 0, 0.34)' : 'rgba(255, 255, 255, 0.34)',
+      background: {
+        paper: mode == 'light' ? '#fff' : '#090D1F',
+        default: mode == 'light' ? '#fff' : '#090D1F',
+      },
+    },
+    typography: {
+      fontFamily: inter.style.fontFamily,
     },
     components: {
+      MuiCard: {
+        styleOverrides: {
+          root: {
+            backgroundImage: 'none',
+          },
+        },
+      },
       MuiAppBar: {
         styleOverrides: {
           colorPrimary: {
-            backgroundColor: mode == 'light' ? '#fff' : '#000',
+            backgroundImage: 'none',
+            backgroundColor: mode == 'light' ? '#fff' : '#090D1F',
             color: mode == 'light' ? '#000' : '#fff',
           },
           root: {
@@ -42,20 +58,9 @@ const baseTheme = (mode: 'light' | 'dark'): ThemeOptions => {
 };
 
 export const lightTheme = createTheme({
-  palette: {
-    mode: 'light',
-  },
-  typography: {
-    fontFamily: inter.style.fontFamily,
-  },
   ...baseTheme('light'),
 });
 
 export const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-  typography: {
-    fontFamily: inter.style.fontFamily,
-  },
+  ...baseTheme('dark'),
 });
