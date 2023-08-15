@@ -1,8 +1,8 @@
 'use client';
 
-import { ThemeProvider } from '@mui/material';
-import React from 'react';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import { darkTheme, lightTheme } from '@themes/SiteThemes';
+import React from 'react';
 
 const ColorModeContext = React.createContext<ColorModeContextType>({
   toggleColorMode: () => {},

@@ -1,6 +1,6 @@
 import AllBlogPostsSection from '@components/AllBlogPostsSection';
 import RecentBlogPostsSection from '@components/RecentBlogPostsSection';
-import { getAllPostIds, getTotalNumberOfPages } from '@utils/postUtils';
+import { getTotalNumberOfPages } from '@utils/postUtils';
 
 type Params = {
   id: string;

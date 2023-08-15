@@ -1,6 +1,8 @@
 import BlogPostCard from '@components/BlogPostCard';
 import BottomPagination from '@components/BottomPagination';
-import { Box, Grid, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import { getCardPropsForPage } from '@utils/postUtils';
 
 type AllBlogPostsSection = {

@@ -1,18 +1,14 @@
 'use client';
 
 import MenuIcon from '@mui/icons-material/Menu';
-import {
-  AppBar,
-  Box,
-  Button,
-  Container,
-  Divider,
-  IconButton,
-  SxProps,
-  Theme,
-  Toolbar,
-  Typography,
-} from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import React from 'react';
 
 const navItems = [
@@ -31,7 +27,7 @@ const navItems = [
 ];
 
 export default function NavBar() {
-  const toolbarStyles: SxProps<Theme> = {
+  const toolbarStyles = {
     marginY: '10px',
     flexDirection: {
       xs: 'row-reverse',

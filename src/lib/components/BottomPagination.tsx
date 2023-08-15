@@ -1,6 +1,7 @@
 'use client';
 
-import { Box, Pagination } from '@mui/material';
+import Box from '@mui/material/Box';
+import Pagination from '@mui/material/Pagination';
 import React from 'react';
 
 type BottomPaginationProps = {

@@ -1,6 +1,6 @@
 'use client';
 
-import { AppBar, ThemeOptions, createTheme } from '@mui/material';
+import createTheme, { ThemeOptions } from '@mui/material/styles/createTheme';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({

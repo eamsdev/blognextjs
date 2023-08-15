@@ -2,7 +2,8 @@ import './globals.css';
 import Footer from '@components/Footer';
 import FullscreenContainer from '@components/FullscreenContainer';
 import Header from '@components/Header';
-import { Container, CssBaseline } from '@mui/material';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeWrapper } from '@themes/ThemeWrapper';
 import type { Metadata } from 'next';
 
