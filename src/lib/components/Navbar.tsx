@@ -58,6 +58,7 @@ export default function NavBar() {
               <Button
                 onClick={() => (location.href = '/')}
                 sx={{
+                  padding: 0,
                   fontSize: '20px',
                   fontWeight: '400 !important',
                   color: 'text.primary',
