@@ -1,5 +1,6 @@
 'use client';
 
+import ThemeToggle from '@components/ThemeToggle';
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -72,7 +73,7 @@ export default function NavBar() {
               </Button>
             </Box>
 
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <Box gap={'20px'} sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}>
               {navItems.map((item) => (
                 <Button
                   onClick={() => (location.href = item.link)}
@@ -90,6 +91,9 @@ export default function NavBar() {
                   {item.label}
                 </Button>
               ))}
+              {/* <Button> */}
+              <ThemeToggle />
+              {/* </Button> */}
             </Box>
           </Toolbar>
           <Divider
