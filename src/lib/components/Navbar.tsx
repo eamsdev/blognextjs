@@ -56,6 +56,7 @@ export default function NavBar() {
               }}
             >
               <Button
+                disableRipple
                 onClick={() => (location.href = '/')}
                 sx={{
                   padding: 0,
@@ -77,6 +78,7 @@ export default function NavBar() {
             <Box gap={'20px'} sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}>
               {navItems.map((item) => (
                 <Button
+                  disableRipple
                   onClick={() => (location.href = item.link)}
                   sx={{
                     fontSize: '20px',
