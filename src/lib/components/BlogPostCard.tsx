@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import CardContainer from '@components/CardContainer';
 import TagChip from '@components/TagChip';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -11,6 +12,7 @@ import Typography from '@mui/material/Typography';
 // import Image from 'next/image';
 
 export type BlogPostCardProps = {
+  id: string;
   date: Date;
   tags: string[];
   author: string;
@@ -25,7 +27,7 @@ type CardProps = {
 
 export default function BlogPostCard(props: BlogPostCardProps & CardProps) {
   return (
-    <Card sx={{ borderRadius: 0, boxShadow: 'none', overflow: 'hidden' }}>
+    <CardContainer postId={props.id}>
       <CardActionArea
         sx={{
           display: { md: `${props.condensed ? 'flex' : 'block'}` },
@@ -56,7 +58,7 @@ export default function BlogPostCard(props: BlogPostCardProps & CardProps) {
         />
         <StyledCardContent {...props} />
       </CardActionArea>
-    </Card>
+    </CardContainer>
   );
 }
 

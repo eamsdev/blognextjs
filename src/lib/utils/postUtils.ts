@@ -30,7 +30,7 @@ const firstParagraphRegex = /\w.*/;
 
 export const getAllPostsCardProps = (): BlogPostCardProps[] => {
   var allPosts = getAllPostIds()
-    .map((x) => getCardProps(x.params.id))
+    .map((x) => getCardProps(x.id))
     .sort(sortByLatestDateFunc);
   return allPosts;
 };
@@ -69,9 +69,7 @@ export const getPostData = (id: string): PostData => {
 export const getAllPostIds = () => {
   return fs.readdirSync(postsDirectory).map((fileName) => {
     return {
-      params: {
-        id: fileName.replace(/\.md$/, ''),
-      },
+      id: fileName.replace(/\.md$/, ''),
     };
   });
 };
