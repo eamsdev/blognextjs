@@ -32,11 +32,6 @@ export default function BlogPostCard(props: BlogPostCardProps & CardProps) {
         sx={{
           display: { md: `${props.condensed ? 'flex' : 'block'}` },
           alignItems: 'flex-start',
-          '&:hover': {
-            '& .cardImage': {
-              filter: 'brightness(95%)',
-            },
-          },
         }}
       >
         <CardMedia
@@ -45,7 +40,7 @@ export default function BlogPostCard(props: BlogPostCardProps & CardProps) {
           title={props.title}
           sx={{
             transition: '0.3s filter linear',
-            filter: 'brightness(80%)',
+            filter: 'brightness(90%)',
             backgroundPosition: 'center',
             minHeight: { xs: '200px', md: `${props.condensed ? '200px' : '259px'}` },
             width: { xs: 'auto', md: `${props.condensed ? '40%' : '100%'}` },

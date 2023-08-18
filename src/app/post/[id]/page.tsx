@@ -1,3 +1,6 @@
+import PostContainer from '../../../lib/components/PostContainer';
+import RecentBlogPostsColumn from '@components/RecentBlogPostsColumn';
+import Box from '@mui/material/Box/Box';
 import { getAllPostIds, getPostData } from '@utils/postUtils';
 
 type Params = {
@@ -11,7 +14,12 @@ type Props = {
 export default function Page({ params }: Props) {
   const postData = getPostData(params.id);
 
-  return <main>{postData.frontmatter.id}</main>;
+  return (
+    <Box component="main" display="flex" alignItems="flex-start" gap="32px" alignSelf="stretch">
+      <RecentBlogPostsColumn />
+      <PostContainer />
+    </Box>
+  );
 }
 
 export const generateStaticParams = (): Params[] => {
