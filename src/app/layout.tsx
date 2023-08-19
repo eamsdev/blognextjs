@@ -1,10 +1,11 @@
+import { darkTheme } from '../lib/themes/SiteThemes';
 import './globals.css';
 import Footer from '@components/Footer';
 import FullscreenContainer from '@components/FullscreenContainer';
 import Header from '@components/Header';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeWrapper } from '@themes/ThemeWrapper';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <link rel="preload" href="/profilePhoto.webp" as="image" />
       </head>
       <body>
-        <ThemeWrapper>
+        <ThemeProvider theme={darkTheme}>
           <CssBaseline />
           <FullscreenContainer>
             <Container>
@@ -28,7 +29,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               <Footer />
             </Container>
           </FullscreenContainer>
-        </ThemeWrapper>
+        </ThemeProvider>
       </body>
     </html>
   );
