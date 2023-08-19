@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography/Typography';
 import { getAllPostsCardProps } from '@utils/postUtils';
 
 export default function RecentBlogPostsColumn() {
-  const cardProps = getAllPostsCardProps();
+  const cardProps = getAllPostsCardProps().slice(1).slice(0, 5);
   return (
     <>
       <Box

@@ -35,7 +35,6 @@ export default function BlogPostCard(props: BlogPostCardProps & CardProps) {
         }}
       >
         <CardMedia
-          className="cardImage"
           image={props.thumbnailPath}
           title={props.title}
           sx={{
