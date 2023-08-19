@@ -1,6 +1,5 @@
 'use client';
 
-import ThemeToggle from '@components/ThemeToggle';
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -94,9 +93,6 @@ export default function NavBar() {
                   {item.label}
                 </Button>
               ))}
-              {/* <Button> */}
-              <ThemeToggle />
-              {/* </Button> */}
             </Box>
           </Toolbar>
           <Divider
