@@ -45,7 +45,7 @@ export default function BlogPostCard(props: BlogPostCardProps & CardProps) {
             minHeight: { xs: '200px', md: `${props.condensed ? '200px' : '259px'}` },
             width: { xs: 'auto', md: `${props.condensed ? '40%' : '100%'}` },
             marginBottom: {
-              xs: '20px !important',
+              xs: '15px !important',
               md: `${props.condensed ? '0px !important' : '10px'}`,
             },
             marginRight: { md: `${props.condensed ? '10px' : '0'}` },

@@ -13,10 +13,10 @@ export default function RecentBlogPostsColumn() {
         flexDirection="column"
         justifyContent="center"
         alignItems="flex-start"
-        gap="32px"
+        gap="36px"
         sx={{
           width: { sm: '250px', lg: '300px' },
-          display: { sm: 'none', md: 'flex' },
+          display: { xs: 'none', md: 'flex' },
         }}
       >
         <Typography fontSize={'24px'} fontWeight={600}>

@@ -22,9 +22,10 @@ export default function Page({ params }: Props) {
       gap="32px"
       alignSelf="stretch"
       marginTop={'32px'}
+      minWidth={'0px'}
     >
       <RecentBlogPostsColumn />
-      <PostContainer />
+      <PostContainer {...postData} />
     </Box>
   );
 }
