@@ -14,6 +14,10 @@ export default function RecentBlogPostsColumn() {
         justifyContent="center"
         alignItems="flex-start"
         gap="32px"
+        sx={{
+          width: { sm: '250px', lg: '300px' },
+          display: { sm: 'none', md: 'flex' },
+        }}
       >
         <Typography fontSize={'24px'} fontWeight={600}>
           Recent blog posts

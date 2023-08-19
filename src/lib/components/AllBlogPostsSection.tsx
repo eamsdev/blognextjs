@@ -13,7 +13,7 @@ type AllBlogPostsSection = {
 export default function AllBlogPostsSection({ pageNumber, totalPages }: AllBlogPostsSection) {
   const cardProps = getCardPropsForPage(pageNumber);
   return (
-    <Box paddingY={'20px'}>
+    <Box paddingTop={'20px'}>
       <div id="all">
         <Typography fontSize={'24px'} fontWeight={'600'}>
           All blog posts
