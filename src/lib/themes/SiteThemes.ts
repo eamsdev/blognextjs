@@ -7,7 +7,6 @@ const inter = Inter({
   weight: ['100', '300', '400', '500', '700', '900'],
   style: ['normal'],
   subsets: ['latin'],
-  display: 'swap',
 });
 
 const baseTheme = (mode: 'light' | 'dark'): ThemeOptions => {
@@ -16,8 +15,8 @@ const baseTheme = (mode: 'light' | 'dark'): ThemeOptions => {
       mode: mode,
       divider: mode == 'light' ? 'rgba(0, 0, 0, 0.34)' : 'rgba(255, 255, 255, 0.34)',
       background: {
-        paper: mode == 'light' ? '#fff' : '#090D1F',
-        default: mode == 'light' ? '#fff' : '#090D1F',
+        paper: mode == 'light' ? '#fff' : '#101418',
+        default: mode == 'light' ? '#fff' : '#101418',
       },
     },
     typography: {
@@ -35,7 +34,7 @@ const baseTheme = (mode: 'light' | 'dark'): ThemeOptions => {
         styleOverrides: {
           colorPrimary: {
             backgroundImage: 'none',
-            backgroundColor: mode == 'light' ? '#fff' : '#090D1F',
+            backgroundColor: mode == 'light' ? '#fff' : '#101418',
             color: mode == 'light' ? '#000' : '#fff',
           },
           root: {
