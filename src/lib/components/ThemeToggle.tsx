@@ -13,32 +13,32 @@ export default function ThemeToggle() {
     <Box
       display={'flex'}
       alignItems={'flex-start'}
-      gap={'5px'}
+      gap={'4px'}
       borderRadius={'29px'}
       bgcolor={'text.primary'}
       color={'background.default'}
-      width={'60px'}
-      height={'31px'}
+      width={'50px'}
+      height={'26px'}
       position={'relative'}
       onClick={toggleColorMode}
       sx={{
-        padding: '4px 3px',
+        padding: '3px 3px',
       }}
     >
       <Box
         position={'absolute'}
-        left={'5px'}
-        width={'23px'}
-        height={'23px'}
+        left={'4px'}
+        width={'20px'}
+        height={'20px'}
         bgcolor={'background.default'}
         borderRadius={'50%'}
         sx={{
-          transform: `${currentColorMode === 'light' ? '' : 'translateX(28px)'}`,
+          transform: `${currentColorMode === 'light' ? '' : 'translateX(23px)'}`,
           transition: 'transform ease 0.05s',
         }}
       />
-      <DarkModeOutlinedIcon />
-      <LightModeOutlinedIcon />
+      <DarkModeOutlinedIcon fontSize="small" />
+      <LightModeOutlinedIcon fontSize="small" />
     </Box>
   );
 }
