@@ -20,10 +20,6 @@ const navItems = [
     label: 'About',
     link: '/about',
   },
-  {
-    label: 'Contact',
-    link: '/contact',
-  },
 ];
 
 export default function NavBar() {

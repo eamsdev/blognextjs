@@ -8,7 +8,7 @@ export default function Footer() {
       paddingY={'30px'}
       display={'flex'}
       flexDirection={'column'}
-      alignItems={{ xs: 'center', md: 'flex-start' }}
+      alignItems={{ xs: 'center' }}
       alignSelf={'stretch'}
     >
       <Box display={'flex'} alignItems={'flex-start'} gap="14px">
