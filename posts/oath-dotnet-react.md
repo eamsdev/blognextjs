@@ -1,5 +1,5 @@
 ---
-id: oauth-react-dotnet
+id: oath-dotnet-react
 title: OAuth with .Net 6 and React
 description: Learn how to authenticate users using OAuth for a .Net application with React frontend.
 date: 03-05-2023
