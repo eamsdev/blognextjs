@@ -13,9 +13,11 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const postData = getPostData(params.id);
+
   return {
-    title: 'TODO',
-    description: 'TODO',
+    title: postData.frontmatter.title,
+    description: postData.frontmatter.description,
   };
 }
 
