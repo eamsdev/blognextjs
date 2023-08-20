@@ -1,4 +1,5 @@
 import { StylisedMarkdown } from '@components/StylisedMarkdown';
+import TagChip from '@components/TagChip';
 import Box from '@mui/material/Box/Box';
 import Divider from '@mui/material/Divider/Divider';
 import Typography from '@mui/material/Typography/Typography';
@@ -7,7 +8,7 @@ import { PostData } from '@utils/postUtils';
 export default function PostContainer(props: PostData) {
   const {
     body,
-    frontmatter: { title, description, date, author },
+    frontmatter: { title, description, date, author, tags },
   } = props;
 
   return (
@@ -63,6 +64,11 @@ export default function PostContainer(props: PostData) {
       >
         {description}
       </Typography>
+      <Box display={'flex'} gap={1} marginTop={2}>
+        {tags.map((tag) => (
+          <TagChip key={tag} tag={tag} link={`/tag/${tag}`} />
+        ))}
+      </Box>
       <Divider sx={{ marginTop: '16px' }} />
       <StylisedMarkdown markdown={body} />
     </Box>

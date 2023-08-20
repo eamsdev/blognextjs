@@ -19,7 +19,7 @@ export default function Page({ params }: Props) {
       <Box paddingTop={'20px'}>
         <div id="all">
           <Typography fontSize={'24px'} fontWeight={'600'}>
-            All blog posts
+            Tagged with: {params.id}
           </Typography>
         </div>
         <Grid container spacing={2} marginTop={'10px'}>
