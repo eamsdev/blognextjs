@@ -15,7 +15,8 @@ export default function RecentBlogPostsColumn() {
         alignItems="flex-start"
         gap="36px"
         sx={{
-          width: { sm: '250px', lg: '300px' },
+          minWidth: { sm: '250px', lg: '250px' },
+          width: { sm: '250px', lg: '250px' },
           display: { xs: 'none', md: 'flex' },
         }}
       >
