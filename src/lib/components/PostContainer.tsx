@@ -48,7 +48,7 @@ export default function PostContainer(props: PostData) {
         },
       }}
     >
-      <Typography color={'secondary.dark'} fontSize={14} fontWeight={600} marginBottom={1}>
+      <Typography color={'primary.dark'} fontSize={14} fontWeight={600} marginBottom={1}>
         {author} • {date.toLocaleDateString()}
       </Typography>
       <Typography component={'h1'} fontSize={42} fontWeight={700} lineHeight={1.2}>

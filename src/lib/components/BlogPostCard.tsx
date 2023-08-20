@@ -75,7 +75,7 @@ const StyledCardContent = ({
       }}
     >
       <CardContent sx={{ padding: 0 }}>
-        <Typography color={'secondary.dark'} fontSize={14} fontWeight={600} marginBottom={1}>
+        <Typography color={'primary.dark'} fontSize={14} fontWeight={600} marginBottom={1}>
           {author} • {date.toLocaleDateString()}
         </Typography>
         <Typography fontSize={'20px'} fontWeight={'600'} lineHeight={1.3} marginBottom={1}>
