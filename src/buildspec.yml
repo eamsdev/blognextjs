@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo update npm...
+      - npm update -g npm
+      - echo node -v
+      - node -v
+      - echo npm -v
+      - npm -v
+      - echo install yarn...
+      - npm install -g yarn
+      - echo yarn -v
+      - yarn -v
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - yarn install
+  build:
+    commands:
+      - echo Build started on `date`
+      - yarn run build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - aws s3 sync ./out s3://eams.dev --delete
+artifacts:
+  base-directory: 'out'
+  files:
+    - '**/*'
