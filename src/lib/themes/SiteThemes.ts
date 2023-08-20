@@ -15,8 +15,8 @@ const baseTheme = (mode: 'light' | 'dark'): ThemeOptions => {
       mode: mode,
       divider: mode == 'light' ? 'rgba(0, 0, 0, 0.34)' : 'rgba(255, 255, 255, 0.34)',
       background: {
-        paper: mode == 'light' ? '#fff' : '#101418',
-        default: mode == 'light' ? '#fff' : '#101418',
+        paper: mode == 'light' ? '#fff' : '#1C2128',
+        default: mode == 'light' ? '#fff' : '#1C2128',
       },
     },
     typography: {
@@ -34,7 +34,7 @@ const baseTheme = (mode: 'light' | 'dark'): ThemeOptions => {
         styleOverrides: {
           colorPrimary: {
             backgroundImage: 'none',
-            backgroundColor: mode == 'light' ? '#fff' : '#101418',
+            backgroundColor: mode == 'light' ? '#fff' : '#1C2128',
             color: mode == 'light' ? '#000' : '#fff',
           },
           root: {

@@ -33,8 +33,8 @@ export default function PostContainer(props: PostData) {
             fontSize: '85%',
             whiteSpace: 'break-spaces',
             borderRadius: '6px',
-            color: '#000',
-            backgroundColor: '#bdbdbd',
+            color: '#fff',
+            backgroundColor: '#3a3a3a',
           },
           'pre, img': {
             borderRadius: '0.3em',
