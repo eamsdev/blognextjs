@@ -2,6 +2,7 @@ import PostContainer from '../../../lib/components/PostContainer';
 import RecentBlogPostsColumn from '@components/RecentBlogPostsColumn';
 import Box from '@mui/material/Box/Box';
 import { getAllPostIds, getPostData } from '@utils/postUtils';
+import type { Metadata } from 'next';
 
 type Params = {
   id: string;
@@ -10,6 +11,13 @@ type Params = {
 type Props = {
   params: Params;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return {
+    title: 'TODO',
+    description: 'TODO',
+  };
+}
 
 export default function Page({ params }: Props) {
   const postData = getPostData(params.id);

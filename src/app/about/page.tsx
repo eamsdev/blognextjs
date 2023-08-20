@@ -1,8 +1,13 @@
 import RecentBlogPostsColumn from '@components/RecentBlogPostsColumn';
 import Box from '@mui/material/Box/Box';
-import Divider from '@mui/material/Divider/Divider';
 import Typography from '@mui/material/Typography/Typography';
+import type { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'TODO',
+  description: 'TODO',
+};
 
 export default function Home() {
   return (

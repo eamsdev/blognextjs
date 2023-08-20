@@ -16,7 +16,7 @@ export default function Discussion({ title }: { title: string }) {
       reactionsEnabled="1"
       emitMetadata="1"
       inputPosition="bottom"
-      loading="lazy"
+      loading="eager"
       theme="transparent_dark"
       lang="en"
     />
