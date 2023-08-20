@@ -1,3 +1,4 @@
+import Discussion from '@components/Giscus';
 import { StylisedMarkdown } from '@components/StylisedMarkdown';
 import TagChip from '@components/TagChip';
 import Box from '@mui/material/Box/Box';
@@ -71,6 +72,8 @@ export default function PostContainer(props: PostData) {
       </Box>
       <Divider sx={{ marginTop: '16px' }} />
       <StylisedMarkdown markdown={body} />
+      <Divider sx={{ marginY: '16px' }} />
+      <Discussion title={title} />
     </Box>
   );
 }
