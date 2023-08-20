@@ -28,6 +28,23 @@ const postsDirectory = path.join(process.cwd(), 'posts');
 const frontmatterRegex = /---(.|\n)*?---(\n)/;
 const firstParagraphRegex = /\w.*/;
 
+export function getAllTags() {
+  const allTags = getAllPostsCardProps().flatMap((x) => x.tags);
+  return Array.from(new Set(allTags)).map((x) => {
+    return {
+      id: x,
+    };
+  });
+}
+
+export const getCardPropsForTag = (tag: string): BlogPostCardProps[] => {
+  var allPosts = getAllPostIds()
+    .map((x) => getCardProps(x.id))
+    .filter((x) => x.tags.includes(tag))
+    .sort(sortByLatestDateFunc);
+  return allPosts;
+};
+
 export const getAllPostsCardProps = (): BlogPostCardProps[] => {
   var allPosts = getAllPostIds()
     .map((x) => getCardProps(x.id))
