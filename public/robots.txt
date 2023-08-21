@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://eams.dev
-
-# Sitemaps
-Sitemap: https://eams.dev/sitemap.xml

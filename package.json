@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "prebuild": "next-sitemap",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "serve": "npx serve@latest out",
