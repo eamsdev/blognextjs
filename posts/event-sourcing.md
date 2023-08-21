@@ -8,7 +8,7 @@ readTime: 12 min
 meta: Learn how to use create a event sourcing micro framework with Entity Framework Core and EventStore DB.
 tags:
   - .Net
-  - Event Sourcing
+  - Architecture
   - CSharp
 thumbnailPath: /post-img/miniess-thumbnail.webp
 ---

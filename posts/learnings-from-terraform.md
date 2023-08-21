@@ -1,7 +1,7 @@
 ---
 id: learnings-from-terraform
-title: Tips, tricks and learnings from using Terraform with AWS and Azure
-description: Tips and tricks on how you could improve your Terraform code
+title: Writing better Terraform code
+description: Tips, tricks and learnings from using Terraform with AWS and Azure
 date: 02-08-2023
 author: Pete Eamsuwan
 readTime: 5 min
