@@ -24,7 +24,8 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - aws s3 sync ./out s3://eams.dev --delete
+      - aws s3 sync ./out s3://eams.dev --delete -recursive --cache-control max-age=604800
+      - aws s3 sync ./out/index.html s3://eams.dev/index.html --delete -recursive --cache-control max-age=0
 artifacts:
   base-directory: 'out'
   files:
