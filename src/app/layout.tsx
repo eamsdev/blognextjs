@@ -3,7 +3,7 @@ import './globals.css';
 import * as gtag from './gtag';
 import Footer from '@components/Footer';
 import FullscreenContainer from '@components/FullscreenContainer';
-import Header from '@components/Header';
+import NavBar from '@components/NavBar';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
@@ -45,7 +45,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <CssBaseline />
           <FullscreenContainer>
             <Container>
-              <Header />
+              <NavBar />
               {children}
               <Footer />
             </Container>
