@@ -1,9 +1,9 @@
 import { darkTheme } from '../lib/themes/SiteThemes';
 import './globals.css';
 import * as gtag from './gtag';
+import NavigationBar from '@/lib/components/NavigationBar';
 import Footer from '@components/Footer';
 import FullscreenContainer from '@components/FullscreenContainer';
-import NavBar from '@components/NavBar';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
@@ -45,7 +45,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <CssBaseline />
           <FullscreenContainer>
             <Container>
-              <NavBar />
+              <NavigationBar />
               {children}
               <Footer />
             </Container>

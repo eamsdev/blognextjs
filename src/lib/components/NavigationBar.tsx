@@ -24,7 +24,7 @@ const navItems = [
   },
 ];
 
-export default function NavBar() {
+export default function NavigationBar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
     setMobileOpen((state) => !state);
