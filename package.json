@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prebuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "serve": "npx serve@latest out",
@@ -44,6 +45,7 @@
     "cross-env": "^7.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
+    "next-sitemap": "^4.2.2",
     "prettier": "^3.0.1",
     "sass": "^1.65.1"
   },
