@@ -26,7 +26,8 @@ phases:
       - echo Build completed on `date`
       - aws s3 rm s3://eams.dev --recursive
       - aws s3 sync ./out s3://eams.dev --cache-control max-age=8640000 --exclude "*.html"
-      - aws s3 sync ./out s3://eams.dev
+      - aws s3 sync ./out s3://eams.dev --cache-control no-cache --include "*.html"
+      - aws cloudfront create-invalidation --distribution-id E19DVVOHCJL73E --paths "/*.html"
 artifacts:
   base-directory: 'out'
   files:
