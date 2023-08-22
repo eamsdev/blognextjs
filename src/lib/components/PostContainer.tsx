@@ -52,16 +52,21 @@ export default function PostContainer(props: PostData) {
       <Typography color={'primary.dark'} fontSize={14} fontWeight={600} marginBottom={1}>
         {author} • {date.toLocaleDateString()}
       </Typography>
-      <Typography component={'h1'} fontSize={42} fontWeight={700} lineHeight={1.2}>
+      <Typography
+        component={'h1'}
+        fontSize={42}
+        fontWeight={700}
+        sx={{ lineHeight: { xs: '1', sm: '1.2' } }}
+      >
         {title}
       </Typography>
       <Typography
         component={'h2'}
-        marginTop={'10px'}
         fontSize={18}
         fontWeight={600}
         lineHeight={1.2}
         color={'text.secondary'}
+        sx={{ marginTop: { xs: '10px', sm: '5px' } }}
       >
         {description}
       </Typography>
