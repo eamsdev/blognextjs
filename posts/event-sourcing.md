@@ -7,7 +7,7 @@ author: Pete Eamsuwan
 readTime: 12 min
 meta: Learn how to use create a event sourcing micro framework with Entity Framework Core and EventStore DB.
 tags:
-  - .NetCore
+  - NetCore
   - Architecture
   - CSharp
 thumbnailPath: /post-img/miniess-thumbnail.webp

@@ -7,7 +7,7 @@ author: Pete Eamsuwan
 readTime: 5 min
 meta: Learn how integrate client service/interface code generation to your ASP.NET Core build chain in minutes.
 tags:
-  - .NetCore
+  - NetCore
   - Typescript
 thumbnailPath: /post-img/nswag-code-generation-thumbnail.webp
 ---
