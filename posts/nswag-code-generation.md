@@ -1,11 +1,11 @@
 ---
 id: nswag-code-generation
 title: Set up client code generation, in minutes
-description: Integrate client service/interface code generation to your ASP.NET Core build chain in seconds.
+description: Integrate client service/interface code generation to your ASP.NET Core build chain in minutes.
 date: 23-08-2023
 author: Pete Eamsuwan
 readTime: 5 min
-meta: Learn how integrate client service/interface code generation to your ASP.NET Core build chain in seconds.
+meta: Learn how integrate client service/interface code generation to your ASP.NET Core build chain in minutes.
 tags:
   - .Net
   - Typescript
