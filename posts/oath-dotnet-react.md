@@ -8,7 +8,7 @@ readTime: 7 min
 meta: Learn how to authenticate users using OAuth for a .Net application with React frontend.
 tags:
   - OAuth
-  - dotnet
+  - .NetCore
   - CSharp
   - React
   - Security
