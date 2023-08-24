@@ -2,7 +2,7 @@
 id: nextjs-cloudfront-s3
 title: About Nextjs, Cloudfront and S3 (and caching)
 description: Configuring Nextjs static sites to work with S3 and Cloudfront can be tricky. Additionally, we need to talk about caching...
-date: 25-08-2023
+date: 24-08-2023
 author: Pete Eamsuwan
 readTime: 5 min
 meta: Configuring Nextjs static sites to work with S3 and Cloudfront can be tricky, see how here. Additionally, we need to talk about caching.
