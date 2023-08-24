@@ -10,5 +10,6 @@
     "**/.venv": true,
     "**/*.egg-info": true,
     "**/node_modules": false
-  }
+  },
+  "cSpell.words": []
 }

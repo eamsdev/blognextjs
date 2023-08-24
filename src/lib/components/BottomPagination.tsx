@@ -44,7 +44,7 @@ export default function BottomPagination({ pageNumber, totalPages }: BottomPagin
       />
       <NavButton
         direction={'next'}
-        onClick={() => onPageChange(undefined, pageNumber - 1)}
+        onClick={() => onPageChange(undefined, pageNumber + 1)}
         disabled={pageNumber >= totalPages}
       />
     </Box>
