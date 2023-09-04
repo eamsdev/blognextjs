@@ -5,8 +5,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'TODO',
-  description: 'TODO',
+  title: 'About Me',
 };
 
 export default function Home() {
