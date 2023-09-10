@@ -15,7 +15,7 @@ export default function Banner() {
           width: { xs: '100%', sm: '80%', md: '60%' },
         }}
       >
-        <Typography fontSize={25}>👋 Hello, I'm Pete!</Typography>
+        <Typography fontSize={25}>👋 Hello, I&apos;m Pete!</Typography>
         <Typography fontSize={18} textAlign={'center'} mt={3}>
           Welcome to my personal dev blog. This is where I share things that I have learned in my
           software development journey. I hope you will find my posts here informative, please enjoy
