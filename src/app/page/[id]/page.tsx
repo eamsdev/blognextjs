@@ -1,4 +1,5 @@
 import AllBlogPostsSection from '@components/AllBlogPostsSection';
+import Banner from '@components/Banner';
 import RecentBlogPostsSection from '@components/RecentBlogPostsSection';
 import { getTotalNumberOfPages } from '@utils/postUtils';
 import type { Metadata } from 'next';
@@ -23,6 +24,7 @@ export default function Page({ params }: Props) {
 
   return (
     <main>
+      <Banner />
       {pageNumber == 1 && <RecentBlogPostsSection />}
       <AllBlogPostsSection pageNumber={pageNumber} totalPages={totalPages} />
     </main>
