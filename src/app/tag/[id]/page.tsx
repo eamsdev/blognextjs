@@ -4,22 +4,20 @@ import Grid from '@mui/material/Grid/Grid';
 import Typography from '@mui/material/Typography/Typography';
 import { getAllTags, getCardPropsForTag } from '@utils/postUtils';
 
-type Params = {
-  id: string;
-};
-
 type Props = {
-  params: Params;
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export default function Page({ params }: Props) {
-  var cardProps = getCardPropsForTag(params.id);
+export default async function Page({ params }: Props) {
+  const { id } = await params;
+  var cardProps = getCardPropsForTag(id);
   return (
     <Box component="main">
       <Box paddingTop={'20px'}>
         <div id="all">
           <Typography fontSize={'24px'} fontWeight={'600'}>
-            Tagged with: {params.id}
+            Tagged with: {id}
           </Typography>
         </div>
         <Grid container spacing={2} marginTop={'10px'}>
@@ -34,6 +32,6 @@ export default function Page({ params }: Props) {
   );
 }
 
-export const generateStaticParams = (): Params[] => {
+export async function generateStaticParams() {
   return getAllTags();
-};
+}

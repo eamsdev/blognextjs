@@ -6,6 +6,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = withBundleAnalyzer({
   output: 'export',
   productionBrowserSourceMaps: true,
+  experimental: {
+    reactCompiler: true,
+  },
 });
 
 module.exports = nextConfig;

@@ -4,12 +4,9 @@ import RecentBlogPostsSection from '@components/RecentBlogPostsSection';
 import { getTotalNumberOfPages } from '@utils/postUtils';
 import type { Metadata } from 'next';
 
-type Params = {
-  id: string;
-};
-
 type Props = {
-  params: Params;
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 export const metadata: Metadata = {
@@ -18,8 +15,9 @@ export const metadata: Metadata = {
     "Pete Eamsuwan's Software Development Blog. Here I cover software architecture, design, devops as well as some tips and tricks.",
 };
 
-export default function Page({ params }: Props) {
-  const pageNumber = parseInt(params.id);
+export default async function Page({ params }: Props) {
+  const { id } = await params;
+  const pageNumber = parseInt(id);
   const totalPages = getTotalNumberOfPages();
 
   return (
@@ -31,10 +29,10 @@ export default function Page({ params }: Props) {
   );
 }
 
-export const generateStaticParams = (): Params[] => {
+export async function generateStaticParams() {
   const numberOfPages = getTotalNumberOfPages();
 
-  return Array.from({ length: numberOfPages }, (x, i) => i + 1).map((x) => {
+  return Array.from({ length: numberOfPages }, (_, i) => i + 1).map((x) => {
     return { id: x.toString() };
   });
-};
+}

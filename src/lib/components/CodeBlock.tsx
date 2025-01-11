@@ -1,4 +1,4 @@
-import { CodeProps } from 'react-markdown/lib/ast-to-react';
+import { SyntaxHighlighterProps } from 'react-syntax-highlighter';
 import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash';
 import csharp from 'react-syntax-highlighter/dist/esm/languages/prism/csharp';
 import hcl from 'react-syntax-highlighter/dist/esm/languages/prism/hcl';
@@ -22,13 +22,19 @@ SyntaxHighlighter.registerLanguage('json', json);
 SyntaxHighlighter.registerLanguage('scss', scss);
 SyntaxHighlighter.registerLanguage('bash', bash);
 SyntaxHighlighter.registerLanguage('hcl', hcl);
+const SyntaxHighlighterComponent = SyntaxHighlighter as any as React.FC<SyntaxHighlighterProps>;
 
-const CodeBlock = ({ className, inline, children }: CodeProps) => {
+const CodeBlock = (props: any) => {
+  const { className, inline, children, ...rest } = props;
   const match = /language-(\w+)/.exec(className || '');
   return !inline ? (
-    <SyntaxHighlighter style={theme} language={match ? match[1] : 'language-shell'}>
+    <SyntaxHighlighterComponent
+      {...rest}
+      style={theme}
+      language={match ? match[1] : 'language-shell'}
+    >
       {String(children).replace(/\n$/, '')}
-    </SyntaxHighlighter>
+    </SyntaxHighlighterComponent>
   ) : (
     <code className={className}>{children}</code>
   );

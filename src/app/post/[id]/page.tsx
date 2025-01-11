@@ -4,16 +4,14 @@ import Box from '@mui/material/Box/Box';
 import { getAllPostIds, getPostData } from '@utils/postUtils';
 import type { Metadata } from 'next';
 
-type Params = {
-  id: string;
-};
-
 type Props = {
-  params: Params;
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const postData = getPostData(params.id);
+  const { id } = await params;
+  const postData = getPostData(id);
 
   return {
     title: postData.frontmatter.title,
@@ -21,8 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function Page({ params }: Props) {
-  const postData = getPostData(params.id);
+export default async function Page({ params }: Props) {
+  const { id } = await params;
+  const postData = getPostData(id);
 
   return (
     <Box
@@ -40,6 +39,6 @@ export default function Page({ params }: Props) {
   );
 }
 
-export const generateStaticParams = (): Params[] => {
+export async function generateStaticParams() {
   return getAllPostIds();
-};
+}
